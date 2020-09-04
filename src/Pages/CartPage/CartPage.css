@@ -1,4 +1,18 @@
 /* CartPage.css */
+.CartItem-controls{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 13px;
+    text-decoration:none;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    padding: 10px 25px;
+    z-index: 10;
+  }  
 .CartPage-items {
     margin: 0;
     padding: 0;

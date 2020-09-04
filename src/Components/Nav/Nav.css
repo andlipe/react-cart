@@ -5,7 +5,7 @@
   }
 .App-nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0;
     margin: 0;
   }
