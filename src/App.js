@@ -48,7 +48,7 @@ function App() {
   }
 
   return (
-    <div className="app-home">
+    <div className="App-home">
       <Nav activeTab={activeTab} onTabChange={setActiveTab}/>
       <main className="app-content">
         <Content tab={activeTab} onAddToCart={addToCart} cart={summarizeCart(cart)} onRemoveItem={removeItem}/>

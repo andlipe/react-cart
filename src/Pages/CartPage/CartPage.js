@@ -16,6 +16,7 @@ const CartPage = ({items, onAddOne, onRemoveOne}) => (
                             +
                         </button>
                     </div>
+                    
                 </Item>
             </li>
         ))}

@@ -3,18 +3,13 @@ import './Item.css';
 
 const Item = ({item, children}) => (
         <div className="Item">
-            <div className="Item-left">
-                    <div className="Item-image"></div>
-                    <div className="Item-title">
-                        {item.name}
-                    </div>
-                    <div className="Item-description">
-                        {item.description}
-                    </div>
-            </div>
+            <div className="Item-title">{item.name}</div>
             <div className="Item-right">
-                {children}
-            </div>
+                        {children}
+                    </div>
+                   {/* / <div className="circle"></div> */}
+             <div className="Div-image"><img className="Item-image" alt="tenis" src={item.img}/>
+                </div>
         </div>
     );
 

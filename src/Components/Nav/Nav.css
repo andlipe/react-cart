@@ -1,0 +1,32 @@
+.App-nav {
+    background: #871d23;
+    padding: 30px;
+    border-bottom: 2px solid #100f13;
+  }
+.App-nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+ .App-nav-item {
+    max-width: 200px;
+    list-style: none;
+    margin-right: 32px;
+    font-size: 24px;
+    border-bottom: 4px solid transparent;
+  }
+.App-nav-item a {
+    cursor: pointer;
+    color: #FFF;
+  }
+.App-nav-item a:hover {
+    color: #999;
+  }
+.App-nav-item.selected {
+    border-bottom-color: #100f13;
+  }
+.App-nav-item img{
+  height: 25px;
+  width: 36px ;
+}

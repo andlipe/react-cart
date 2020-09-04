@@ -1,50 +1,145 @@
 .Item {
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    padding: 10px;
-  }
-  .Item-image {
-    width: 64px;
-    height: 64px;
-    border: 1px solid #ccc;
+    padding: 5px;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background-color: #232323;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+}
+.Item:before {
+  content: "";
+  background: url(../../assets/jumpman2.png) no-repeat;
+  position: absolute;
+  opacity: 0;
+  background-size: 300px 300px;
+  width: 300px; 
+  height: 300px;
+  transition: 0.5s;
+  z-index: 11;
+}
+
+.Item:hover:before
+{
+  opacity: 0.06;
+}
+
+  .Div-image {
     margin-right: 10px;
     float: left;
   }
-  .Item-title {
-    font-weight: bold;
-    margin-bottom: 0.4em;
+  .Item-left {
+    display: block;
   }
-  .Item-price {
-    text-align: right;
+
+
+  .Item-title {
+    position: absolute;
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    opacity: 0;
     font-size: 18px;
+    font-weight: bold;
+    
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    z-index: 10;  
+  }
+   .Item:hover .Item-title {
+    top: 40px;
+    opacity: 1;
+
+  }
+  .Item-right {
+    display: block;
+}
+  .Item-price {
+    text-align: left;
+    font-size: 22px;
     color: #555;
+    margin-right: 10px;
   }
   .Item-addToCart {
-    margin-bottom: 5px;
-    font-size: 14px;
-    border: 2px solid #FFAA3F;
-    background-color: #fff;
-    border-radius: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 12px;
+    border: 2px solid  #871d23;
+    text-decoration:none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 30px;
     cursor: pointer;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    padding: 10px 25px;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+  }
+
+  .Item:hover .Item-addToCart {
+    bottom: 30px;
+    opacity: 1;
+
   }
   .Item-addToCart:hover {
-    background-color: #FFDDB2;
+    background-color: rgb(83, 83, 83);
   }
   .Item-addToCart:active {
-    background-color: #ED8400;
+    background-color: #871d23;
     color: #fff;
     outline: none;
   }
   .Item-addToCart:focus {
     outline: none;
   }
-  .Item-left {
-    flex: 1;
-  }
-  .Item-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+
+   .circle {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     border-radius: 50%;
+     width: 200px;
+     height: 200px;
+     background: #fff;
+     transform-style: preserve-3d;
+     z-index: 10; 
+     transform: translate3d(-50%, -50%, 50px)
+   } 
   
+   .Item-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 300px;
+    z-index: 11;
+
+    max-height: 300px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 50px) rotate(0deg)
+  }
+
+  .CartItem-controls{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    font-size: 13px;
+    text-decoration:none;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    padding: 10px 25px;
+    z-index: 10;
+  }

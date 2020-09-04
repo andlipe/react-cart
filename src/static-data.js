@@ -1,33 +1,32 @@
+import Chicago from './assets/chicago.png'
+import BlackCat from './assets/blackcat.png'
+import PineGreen from './assets/pinegreen.png'
+import Zoom from './assets/zoom.png'
+
 let items = [
     {
     id: 0,
-    name: "Apple iPad Mini 2 16GB",
-    description: "An iPad like no other. 16GB, WiFi, 4G.",
-    price: 229.00
+    name: "Air Jordan 1 Chicago",
+    price: 229.00,
+    img: Chicago
     },
     {
     id: 1,
-    name: "Apple iPad Mini 2 32GB",
-    description: "Even larger than the 16GB.",
-    price: 279.00
+    name: "Air Jordan 4 Retro Black Cat",
+    price: 279.00,
+    img: BlackCat
     },
     {
     id: 2,
-    name: "Canon T7i",
-    description: "DSLR camera with lots of megapixels.",
-    price: 749.99
+    name: "Air Jordan 1 Pine Green",
+    price: 749.99,
+    img: PineGreen
     },
     {
     id: 3,
-    name: "Apple Watch Sport",
-    description: "A watch",
-    price: 249.99
-    },
-    {
-    id: 4,
-    name: "Apple Watch Silver",
-    description: "A more expensive watch",
-    price: 599.99
+    name: "Air Jordan 1 Zoom Fearless",
+    price: 249.99,
+    img: Zoom
     }
    ];
    export {items}
