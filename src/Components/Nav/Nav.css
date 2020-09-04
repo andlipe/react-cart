@@ -4,15 +4,16 @@
     border-bottom: 2px solid #100f13;
   }
 .App-nav ul {
+
     display: flex;
-    justify-content: center;
     padding: 0;
     margin: 0;
+    justify-content: center;
   }
  .App-nav-item {
+    padding: 5px;
     max-width: 200px;
     list-style: none;
-    margin-right: 32px;
     font-size: 24px;
     border-bottom: 4px solid transparent;
   }
@@ -27,6 +28,7 @@
     border-bottom-color: #100f13;
   }
 .App-nav-item img{
+  position: absolute;
   height: 25px;
   width: 36px ;
 }

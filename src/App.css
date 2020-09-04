@@ -3,9 +3,48 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  width: 99vw;
+  min-height: 95vh;
   background-color: #131313;
   flex-wrap: wrap;
-  width: 100vw;
   transform-style: preserve-3d;
+}
+@media only screen and (max-width: 600px) {
+  * {
+    max-width: 100vw;
+    
+  } 
+  .App-home .Item {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+}
+
+  .App-home .Item .Item-image {
+    max-width: 200px;
+  }
+
+  .App-home .Item::before {
+    background-size: 100% 100%;
+    width: 100%; 
+    height: 100%;
+  }
+  .App-home .Item .Item-addToCart {
+    font-size: 11px;
+    padding: 5px;
+
+  }
+  .App-home .Item:hover .Item-addToCart {
+    bottom: 10px;
+  }
+  .App-home .App-nav {
+    height: 100%;
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 12;
+  }
+
 }
