@@ -1,23 +1,76 @@
 /* CartPage.css */
+.CartPage-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.CartPage-items {
+  width: 80%;
+  margin: 0;
+  padding: 0;
+ }
+
+.CartPage-checkout {
+
+  display: flex;  
+  flex-direction: column;
+  align-items: left;
+  align-content: center;
+
+  background-color: #F5F5F6;
+
+}
+
+.CartPage-checkout h3 {
+  margin: 0;
+  max-width: 100%;
+  font-size: 30px;
+  border-bottom: 1px solid black;
+  padding: 20px;
+}
+
+.CartPage-checkout .CartPage-Totalprice {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.CartPage-checkout button {
+  display: inline-block;
+  width: 50%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  transform: translateX(50%);
+  
+  border-style: none;
+  border-radius: 2px;
+  border-color: #871d23;
+  background-color: #871d23;
+  color: #FFF;
+
+
+  cursor: pointer;
+}
+
 .CartItem-controls{
+    
     position: absolute;
     bottom: 0;
     left: 50%;
     font-size: 13px;
     text-decoration:none;
     color: #fff;
-    border-radius: 30px;
     cursor: pointer;
     transform-style: preserve-3d;
     transform: translate3d(-50%,0,75px);
     padding: 10px 25px;
     z-index: 10;
-  }  
-.CartPage-items {
-    margin: 0;
-    padding: 0;
-   }
-   .CartPage-items li {
+  } 
+ 
+.CartPage-items li {
     list-style: none;
    }
    .CartItem-count {
@@ -26,9 +79,12 @@
    }
    .CartItem-addOne,
    .CartItem-removeOne {
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    background: #fff;
+    padding: 0 5px;
+   
+    font-size: 30px;
+    border: none;
+    background: #232323;
+    color: #fff;
    }
    .CartItem-addOne {
     border-left: none;
@@ -36,3 +92,40 @@
     .CartItem-removeOne {
      border-right: none;
     }
+    
+.CartPage-items .Item {
+  width: 109vw;
+  flex-direction: row; 
+  border-radius: 0;
+
+  max-height: 150px;
+  margin: 0;
+}
+
+.CartPage-items .Item .Item-image{
+  max-width: 20%;
+  left: 20%;
+}
+
+@media only screen and (max-width: 600px) {
+  .CartPage-container {
+    flex-direction: column;
+  }
+  .CartPage-items {
+    width: 100%;
+  }
+  .CartPage-items .Item::before {
+    
+    display: none;
+  }
+  .CartPage-items .Item .Item-title{
+    opacity: 1;
+  }
+  
+  .CartPage-checkout {
+    width: 100%;
+  }
+  .CartPage-checkout h3 {
+    padding: 20px 0;
+  }
+}

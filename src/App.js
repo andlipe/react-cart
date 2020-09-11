@@ -8,9 +8,11 @@ import {items} from './static-data'
 function App() {
   const [activeTab, setActiveTab] = useState("items");
   const [cart, setCart] = useState([]);
+  const [price, setPrice] = useState(0)
 
   const addToCart = (item) => {
     setCart((prevCart) => [...prevCart, item]);
+    setPrice(price + item.price)
   }
 
   const removeItem = (item) => {
@@ -22,6 +24,7 @@ function App() {
         return copy;
       })
     }
+    setPrice(price - item.price)
   }
 
   const summarizeCart = (cart) => {
@@ -43,7 +46,7 @@ function App() {
         case "items":
           return(<ItemPage items={items} onAddToCart={onAddToCart}/>)
          case "cart":
-           return (<CartPage onAddOne={onAddToCart} onRemoveOne={removeItem} items={cart} />)
+           return (<CartPage onAddOne={onAddToCart} onRemoveOne={removeItem} items={cart} finalPrice={price}/>)
     }
   }
 

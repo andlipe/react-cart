@@ -1,14 +1,16 @@
 .App-nav {
+    width: 100%;
     background: #871d23;
     padding: 30px;
     border-bottom: 2px solid #100f13;
   }
 .App-nav ul {
 
-    display: flex;
+    display: inline-flex;
     padding: 0;
     margin: 0;
     justify-content: center;
+    align-items: center;
   }
  .App-nav-item {
     padding: 5px;

@@ -1,28 +1,33 @@
 
 .Item {
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    padding: 5px;
+
+    
     width: 300px;
     height: 400px;
     margin: 40px;
-    background-color: #232323;
     border-radius: 20px;
+    padding: 5px;
+    
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    flex-wrap: wrap;
+    
+    
     transform-style: preserve-3d;
-}
-.Item:before {
-  content: "";
-  background: url(../../assets/jumpman2.png) no-repeat;
-  position: absolute;
-  opacity: 0;
-  background-size: 250px 300px;
+    background-color: #232323;
+  }
+  .Item:before {
   width: 250px; 
   height: 100%;
+
+  position: absolute;
+  content: "";
+  background: url(../../assets/jumpman2.png) no-repeat;
+  background-size: 250px 300px;
   transition: 0.5s;
+  opacity: 0;
   z-index: 11;
 }
 
@@ -38,7 +43,18 @@
   .Item-left {
     display: block;
   }
+  .Item-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 300px;
+    z-index: 11;
 
+    max-height: 300px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-35%, -25%, 50px) rotate(0deg)
+  }
 
   .Item-title {
     position: absolute;
@@ -118,17 +134,6 @@
      transform: translate3d(-50%, -50%, 50px)
    } 
   
-   .Item-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 300px;
-    z-index: 11;
 
-    max-height: 300px;
-    transition: 0.5s;
-    transform-style: preserve-3d;
-    transform: translate3d(-35%, -25%, 50px) rotate(0deg)
-  }
 
   
