@@ -11,49 +11,10 @@
   padding: 0;
  }
 
-.CartPage-checkout {
-
-  display: flex;  
-  flex-direction: column;
-  align-items: left;
-  align-content: center;
-
-  background-color: #F5F5F6;
-
-}
-
-.CartPage-checkout h3 {
-  margin: 0;
-  max-width: 100%;
-  font-size: 30px;
-  border-bottom: 1px solid black;
-  padding: 20px;
-}
-
-.CartPage-checkout .CartPage-Totalprice {
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-between;
-}
-
-.CartPage-checkout button {
-  display: inline-block;
-  width: 50%;
-  padding: 10px 0;
-  margin-bottom: 10px;
-  font-size: 18px;
-  transform: translateX(50%);
-  
-  border-style: none;
-  border-radius: 2px;
-  border-color: #871d23;
-  background-color: #871d23;
-  color: #FFF;
-
-
-  cursor: pointer;
-}
+ 
+.CartPage-items li {
+    list-style: none;
+   }
 
 .CartItem-controls{
     
@@ -69,16 +30,14 @@
     padding: 10px 25px;
     z-index: 10;
   } 
- 
-.CartPage-items li {
-    list-style: none;
-   }
-   .CartItem-count {
+
+.CartItem-count {
     padding: 5px 10px;
     border: 1px solid #ccc;
    }
-   .CartItem-addOne,
-   .CartItem-removeOne {
+
+.CartItem-addOne,
+.CartItem-removeOne {
     padding: 0 5px;
    
     font-size: 30px;
@@ -86,10 +45,12 @@
     background: #232323;
     color: #fff;
    }
-   .CartItem-addOne {
+
+.CartItem-addOne {
     border-left: none;
     }
-    .CartItem-removeOne {
+
+.CartItem-removeOne {
      border-right: none;
     }
     
@@ -101,10 +62,49 @@
   max-height: 150px;
   margin: 0;
 }
+.CartPage-items .Item .Item-title {
+  top: 40px;
+}
 
 .CartPage-items .Item .Item-image{
   max-width: 20%;
   left: 20%;
+}
+
+.CartPage-checkout {
+
+  display: flex;  
+  flex-direction: column;
+  align-items: left;
+  align-content: center;
+
+  background-color: #F5F5F6;
+
+}
+
+.CartPage-checkout .CartPage-Totalprice {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.CartPage-checkout button {
+  display: block;
+  width: 90%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transform: translateX(5%); 
+  
+  border-style: none;
+  border-radius: 2px;
+  border-color: #871d23;
+  background-color: #871d23;
+  color: #FFF;
+
+
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -125,7 +125,10 @@
   .CartPage-checkout {
     width: 100%;
   }
-  .CartPage-checkout h3 {
-    padding: 20px 0;
+
+  .CartPage-Totalprice {
+    font-size: 16px;
+    margin: 10px 20px 10px 20px;
+    font-weight: 500;
   }
 }

@@ -20,6 +20,8 @@ const CartPage = ({items, onAddOne, onRemoveOne, finalPrice}) => {
                             </button>
                             
                         </div>
+                        <span>$ </span>
+                        <span>{item.price * item.count}</span>
                 </Item>
                 </li>
                 
@@ -28,9 +30,9 @@ const CartPage = ({items, onAddOne, onRemoveOne, finalPrice}) => {
             </ul> 
             <div className="CartPage-checkout">
                 <div className="CartPage-Totalprice">
-                    <p>TOTAL </p><p>R$ {finalPrice}</p>
+                    <p>TOTAL COST </p><p>$ {finalPrice}</p>
             </div>
-                <button>Check Out</button>
+                <button>CHECKOUT</button>
         </div>
     </div>
     )

@@ -1,8 +1,15 @@
 .App-nav {
-    width: 100%;
-    background: #871d23;
-    padding: 30px;
-    border-bottom: 2px solid #100f13;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  padding: 10px 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 12;
+  border-bottom: 2px solid #100f13;
+  background: #871d23;
   }
 .App-nav ul {
 
