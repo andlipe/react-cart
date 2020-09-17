@@ -28,7 +28,6 @@ function App() {
   }
 
   const summarizeCart = (cart) => {
-
     const groupedItems = cart.reduce((summary, item) => {
       summary[item.id] = summary[item.id] || {
         ...item,
@@ -39,6 +38,34 @@ function App() {
     }, {});
     return Object.values(groupedItems);
   }
+
+  React.useEffect(() => {
+    const activatedTab = window.localStorage.getItem('activeTab')
+    if(!activatedTab !== null) setActiveTab(activatedTab)
+
+    const localCart = JSON.parse(window.localStorage.getItem('cart'))
+    if(localCart !== null) setCart(localCart)
+    
+    const previousPrice = JSON.parse(window.localStorage.getItem('price'))
+    if(previousPrice !== null)
+    setPrice(previousPrice)
+    
+  }, []);
+
+  React.useEffect(() => {
+   window.localStorage.setItem('price', JSON.stringify(price))
+    
+  }, [price]);
+
+  React.useEffect(() => {
+    window.localStorage.setItem('activeTab', activeTab)
+    
+  }, [activeTab]);
+
+  React.useEffect(() => {
+    if (cart !== null)
+    window.localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart]);
 
   const Content = ({tab, onAddToCart, cart, onRemoveItem}) => {
     switch (tab) {

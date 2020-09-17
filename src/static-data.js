@@ -19,13 +19,13 @@ let items = [
     {
     id: 2,
     name: "Air Jordan 1 Pine Green",
-    price: 749.99,
+    price: 749.00,
     img: PineGreen
     },
     {
     id: 3,
     name: "Air Jordan 1 Zoom Fearless",
-    price: 249.99,
+    price: 249.00,
     img: Zoom
     }
    ];

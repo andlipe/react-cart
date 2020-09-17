@@ -1,5 +1,4 @@
-
-.App-home{
+.App-home {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -9,10 +8,8 @@
   transform-style: preserve-3d;
 }
 @media only screen and (max-width: 600px) {
-
   .App-home .Item {
-    
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 
     display: flex;
     width: 200px;
@@ -20,7 +17,6 @@
     margin: 10px;
     left: 100%;
     transform: translateX(-10%);
-    
   }
 
   .App-home .Item .Item-image {
@@ -29,17 +25,14 @@
 
   .App-home .Item::before {
     background-size: 100% 100%;
-    width: 100%; 
+    width: 100%;
     height: 100%;
   }
   .App-home .Item .Item-addToCart {
     font-size: 11px;
     padding: 5px;
-
   }
   .App-home .Item:hover .Item-addToCart {
     bottom: 10px;
   }
-
-
 }

@@ -1,25 +1,26 @@
-
 .Item {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
-    
-    width: 300px;
-    height: 400px;
-    margin: 40px;
-    border-radius: 20px;
-    padding: 5px;
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-    
-    transform-style: preserve-3d;
-    background-color: #232323;
-  }
-  .Item:before {
-  width: 250px; 
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  border-radius: 20px;
+  padding: 5px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(190deg, #871d23, #232323);
+
+  transform-style: preserve-3d;
+  background-color: #232323;
+
+  box-shadow: 0 1px 5px black;
+}
+.Item:before {
+  width: 250px;
   height: 100%;
 
   position: absolute;
@@ -31,109 +32,102 @@
   z-index: 11;
 }
 
-.Item:hover:before
-{
+.Item:hover:before {
   opacity: 0.05;
 }
 
-  .Div-image {
-    margin-right: 10px;
-    float: left;
-  }
-  .Item-left {
-    display: block;
-  }
-  .Item-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 300px;
-    z-index: 11;
-
-    max-height: 300px;
-    transition: 0.5s;
-    transform-style: preserve-3d;
-    transform: translate3d(-35%, -25%, 50px) rotate(0deg)
-  }
-
-  .Item-title {
-    position: absolute;
-    color: #FFF;
-    text-align: center;
-    width: 100%;
-    top: 0;
-    opacity: 0;
-    font-size: 18px;
-    font-weight: 500;
-    
-    transform-style: preserve-3d;
-    transform: translate3d(0,0,75px);
-    transition: 0.5s;
-    z-index: 10;  
-  }
-   .Item:hover .Item-title {
-    top: 40px;
-    opacity: 1;
-
-  }
-  .Item-right {
-    display: block;
+.Div-image {
+  margin-right: 10px;
+  float: left;
 }
-  .Item-price {
-    text-align: left;
-    font-size: 22px;
-    color: #555;
-    margin-right: 10px;
-  }
-  .Item-addToCart {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    font-size: 12px;
-    border: 2px solid  #871d23;
-    text-decoration:none;
-    color: #fff;
-    background-color: #333;
-    border-radius: 30px;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transform: translate3d(-50%,0,75px);
-    padding: 10px 25px;
-    transition: 0.5s;
-    opacity: 0;
-    z-index: 10;
-  }
+.Item-left {
+  display: block;
+}
+.Item-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 300px;
+  z-index: 11;
 
-  .Item:hover .Item-addToCart {
-    bottom: 20px;
-    opacity: 1;
+  max-height: 300px;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-35%, -25%, 50px) rotate(0deg);
+}
 
-  }
-  .Item-addToCart:hover {
-    background-color: rgb(83, 83, 83);
-  }
-  .Item-addToCart:active {
-    background-color: #871d23;
-    color: #fff;
-    outline: none;
-  }
-  .Item-addToCart:focus {
-    outline: none;
-  }
+.Item-title {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  opacity: 0;
+  font-size: 18px;
+  font-weight: 500;
 
-   .circle {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     border-radius: 50%;
-     width: 200px;
-     height: 200px;
-     background: #fff;
-     transform-style: preserve-3d;
-     z-index: 10; 
-     transform: translate3d(-50%, -50%, 50px)
-   } 
-  
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  z-index: 10;
+}
+.Item:hover .Item-title {
+  top: 40px;
+  opacity: 1;
+}
+.Item-right {
+  display: block;
+}
+.Item-price {
+  text-align: left;
+  font-size: 22px;
+  color: #555;
+  margin-right: 10px;
+}
+.Item-addToCart {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 12px;
+  border: 2px solid #871d23;
+  text-decoration: none;
+  color: #fff;
+  background-color: #333;
+  border-radius: 30px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  padding: 10px 25px;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
 
+.Item:hover .Item-addToCart {
+  bottom: 20px;
+  opacity: 1;
+}
+.Item-addToCart:hover {
+  background-color: rgb(83, 83, 83);
+}
+.Item-addToCart:active {
+  background-color: #871d23;
+  color: #fff;
+  outline: none;
+}
+.Item-addToCart:focus {
+  outline: none;
+}
 
-  
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  transform-style: preserve-3d;
+  z-index: 10;
+  transform: translate3d(-50%, -50%, 50px);
+}

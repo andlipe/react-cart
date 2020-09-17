@@ -4,7 +4,7 @@ import './Nav.css';
 import Jumpman from '../../assets/jordan-logo-1.svg'
 
 const Nav = ({ activeTab, onTabChange }) => {
-   const itemClass = (tabName) => `App-nav-item ${activeTab === tabName ? "selected" : ""}`
+const itemClass = (tabName) => `App-nav-item ${activeTab === tabName ? "selected" : ""}`
     return (
         <nav className="App-nav">
             <ul>

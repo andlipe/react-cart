@@ -12,7 +12,7 @@ const ItemPage = ({items, onAddToCart}) => {
                      {/* /   ${item.price} */}
                    {/* / </div> */}
                     <button className="Item-addToCart" onClick={() => onAddToCart(item)}>
-                        Add To Cart
+                         Add To Cart
                     </button>
                    </Item>
                </li>
