@@ -13,6 +13,7 @@ function App() {
   const addToCart = (item) => {
     setCart((prevCart) => [...prevCart, item]);
     setPrice(price + item.price)
+
   }
 
   const removeItem = (item) => {
@@ -72,14 +73,14 @@ function App() {
       default:
         case "items":
           return(<ItemPage items={items} onAddToCart={onAddToCart}/>)
-         case "cart":
-           return (<CartPage onAddOne={onAddToCart} onRemoveOne={removeItem} items={cart} finalPrice={price}/>)
+        case "cart":
+          return (<CartPage onAddOne={onAddToCart} onRemoveOne={removeItem} items={cart} finalPrice={price} />)
     }
   }
 
   return (
     <div className="App-home">
-      <Nav activeTab={activeTab} onTabChange={setActiveTab}/>
+      <Nav activeTab={activeTab} onTabChange={setActiveTab} counter={cart.length}/>
       <main className="app-content">
         <Content tab={activeTab} onAddToCart={addToCart} cart={summarizeCart(cart)} onRemoveItem={removeItem}/>
         </main>

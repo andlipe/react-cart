@@ -3,7 +3,7 @@ import React from 'react';
 import './Nav.css';
 import Jumpman from '../../assets/jordan-logo-1.svg'
 
-const Nav = ({ activeTab, onTabChange }) => {
+const Nav = ({ activeTab, onTabChange, counter }) => {
 const itemClass = (tabName) => `App-nav-item ${activeTab === tabName ? "selected" : ""}`
     return (
         <nav className="App-nav">
@@ -14,10 +14,9 @@ const itemClass = (tabName) => `App-nav-item ${activeTab === tabName ? "selected
                 <li className={itemClass("cart")}>
                     
                     <a onClick={() => onTabChange('cart')}>
-                    Cart
+                    Cart ({counter})
                     <img src={Jumpman} alt="logo"/>
                     </a>
-                    
                 </li>
             </ul>
         </nav>

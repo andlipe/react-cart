@@ -13,6 +13,9 @@
 
   padding: 0;
 }
+.CartPage-items ul {
+  padding: 0;
+}
 .CartPage-items li {
   list-style: none;
 }
@@ -88,7 +91,6 @@
 
   cursor: pointer;
 }
-
 .CartPage-checkout {
   display: flex;
   flex-direction: column;
@@ -97,38 +99,74 @@
 
   width: 25%;
   height: 70vh;
-  max-height: 430px;
+  max-height: 450px;
   min-height: 410px;
   border-radius: 10px;
-  background-color: #f5f5f6;
+  background-color: #fff;
 
   padding: 20px;
 }
-.CartPage-checkout span {
-  margin-bottom: 20px;
+.CartPage-checkout .CartPage-Totalprice {
+  border-bottom: 1px solid #c5c5c5;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  justify-content: space-between;
 }
-.CartPage-checkout input {
-  border: 0;
-  width: 100%;
-  min-height: 40px;
+.CartPage-checkout .Card-Section .Payment-Type {
+  margin-top: 20px;
+  display: flex;
+}
+.CartPage-checkout .Card-Section .Payment-Type label {
+  display: inline-flex;
+  justify-content: center;
+}
+.CartPage-checkout .Card-Section .Payment-Type input {
+  position: absolute;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
 
+.CartPage-checkout .Card-Section .Payment-Type svg {
+  cursor: pointer;
+  width: 50%;
+  height: 50px;
+}
+.CartPage-checkout .Card-Section .Payment-Type input:checked + svg {
+  color: #871d23;
+}
+.CartPage-checkout .Card-Section span {
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+.CartPage-checkout .Card-Section h2 {
+  font-size: 22px;
+}
+.CartPage-checkout .Card-Section input {
+  width: 100%;
   margin-top: 3px;
-  border-radius: 8px;
-  background-color: #c5c5c5;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  color: #222;
+  background-color: #fff;
+
+  outline: none;
+  border: 0;
+  border: 2px solid #c5c5c5;
+  border-radius: 4px;
 }
 .CartPage-checkout .Card-details {
   display: flex;
   justify-content: space-between;
 }
+.CartPage-checkout .Card-details span {
+  margin-bottom: 20px;
+}
 .CartPage-checkout .Card-details span:first-child {
   margin-right: 30px;
-}
-.CartPage-checkout .CartPage-Totalprice {
-  border-top: 1px solid #c5c5c5;
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-between;
 }
 .CartPage-checkout button {
   display: inline-block;
@@ -173,35 +211,38 @@
   }
   .CartPage-items .Item .Item-title {
     position: relative;
-    top: 0;
-    left: 0%;
-    max-width: 100px;
+    top: -10%;
+    left: 20%;
+    max-width: 300px;
     display: inline-flex;
     opacity: 1;
     word-break: break-all;
   }
   .CartPage-items .Item .Item-image {
     width: 25%;
+    top: 50%;
+    left: 15%;
   }
   .CartPage-items .Item .CartItem-controls {
     top: 70%;
-    right: 45%;
+    right: 40%;
   }
   .CartPage-items .Item .CartItem-totalPriceItem {
     color: #fff;
     font-weight: 800;
 
-    top: 50%;
+    top: 55%;
     right: 0;
   }
   .CartPage-checkout {
     width: 80%;
     transform: translateX(5%);
+    border-radius: 5px;
+    min-height: 430px;
+    margin-bottom: 10px;
   }
-
   .CartPage-Totalprice {
     font-size: 16px;
-    margin: 10px 20px 10px 20px;
     font-weight: 500;
   }
 }

@@ -3,11 +3,41 @@
   flex-direction: row;
   flex-wrap: wrap;
   place-content: center;
-  align-items: center
-  }
-  .ItemPage-items li {
-    
-    padding: 0px 20px 20px 20px;
-    list-style: none;
+  align-items: center;
+}
+.ItemPage-items li {
+  padding: 0px 20px 20px 20px;
+  list-style: none;
+}
+@media only screen and (max-width: 600px) {
+  .ItemPage-items .Item {
+    font-family: "Roboto", sans-serif;
 
-  } 
+    display: flex;
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    left: 100%;
+    transform: translateX(-10%);
+  }
+
+  .ItemPage-items .Item .Item-image {
+    max-width: 200px;
+    top: 45%;
+  }
+
+  .ItemPage-items .Item::before {
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .ItemPage-items .Item .Item-addToCart {
+    background-color: inherit;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .ItemPage-items .Item:hover .Item-addToCart {
+    bottom: 10px;
+  }
+}

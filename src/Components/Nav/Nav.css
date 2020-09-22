@@ -12,10 +12,10 @@
   background: #871d23;
 }
 .App-nav ul {
-  display: inline-flex;
+  display: flex;
   padding: 0;
   margin: 0;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .App-nav-item {
@@ -24,6 +24,7 @@
   list-style: none;
   font-size: 24px;
   border-bottom: 4px solid transparent;
+  margin-right: 30px;
 }
 .App-nav-item a {
   cursor: pointer;
@@ -39,4 +40,18 @@
   position: absolute;
   height: 25px;
   width: 36px;
+}
+
+.App-nav .circle {
+  position: relative;
+
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: black;
+  transform-style: preserve-3d;
+  z-index: 10;
+
+  top: 0;
+  transform: translateX(5%);
 }

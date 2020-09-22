@@ -118,16 +118,3 @@
 .Item-addToCart:focus {
   outline: none;
 }
-
-.circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  background: #fff;
-  transform-style: preserve-3d;
-  z-index: 10;
-  transform: translate3d(-50%, -50%, 50px);
-}
