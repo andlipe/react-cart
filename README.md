@@ -8,6 +8,8 @@ Criação de um cart reativo feito com React.JS
 
 ##  Como executar
 Executar dentro da raiz do projeto
+> yarn install
+Após
 > yarn start
 
 Rodando por padrão na porta 3000.
