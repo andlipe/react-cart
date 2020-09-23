@@ -7,9 +7,12 @@ Criação de um cart reativo feito com React.JS
 * Css.
 
 ##  Como executar
-Executar dentro da raiz do projeto
+Instalar as dependencias com o seguinte comando: 
+
 > yarn install
-Após
+
+Após executar:
+
 > yarn start
 
 Rodando por padrão na porta 3000.
