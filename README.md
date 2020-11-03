@@ -1,4 +1,8 @@
 # Cart React
+
+<img align="left" alt="React" width="1000px" src="https://i.imgur.com/MlfUqlo.png" />
+
+
 ## Qual objetivo do projeto
 Criação de um cart reativo feito com React.JS
 ## Tecnologias Utilizadas
